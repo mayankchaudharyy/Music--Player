@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: 0px;
+}
+
+.sect {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.img-div img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  /* animation: rotation 8s infinite linear; */
+  /* transition: 1s; */
+}
+
+.my_anime{
+    animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: transparentize(#fff, 0.8);
+  text-shadow: 0 0 1em transparentize(#000, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border: 17px solid transparentize(#fff, 0.2);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.head p{
+    color: #b2afaf;
+}
+
+.head h1{
+    font-weight: 700;
+    font-size: 34px;
+}
+
+.slider-div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slider-div input {
+  width: 90%;
+}
+
+.slider {
+  background-color: #000;
+  color: #000;
+}
+
+.all-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hidden {
+  display: none;
+}
+
+.all-btn i {
+  font-size: 20px;
+}
+
+.all-btn button {
+  padding: 10px 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0px;
+}
+
+
+.back:hover, .forw:hover, .play:hover, .pause:hover, .next:hover, .prev:hover{
+    /* color: #b2afaf; */
+    scale: 1.2;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+@media screen and (max-width:370px) {
+    .card{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:340px) {
+    .card{
+        padding: 10px;
+    }
+    .img-div img{
+        width: 200px;
+    }
+}
